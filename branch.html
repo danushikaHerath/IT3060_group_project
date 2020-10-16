@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Lankabell</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <br/><br/><br/>
+    <div class="container-fluid">
+        <br/><br/><br/><br/>
+        <h1 style="text-align:center">Branch Network</h1>
+        <br/><br/><br/>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+        
+            <div class="input-group" >
+              <span class="input-group-addon input-sm"><i class="glyphicon glyphicon-search"></i></span>
+              <input class="form-control " id="myInput" type="text" placeholder="Enter Branch Name. . .">
+            </div>
+
+            <br/>
+        
+            <div class="table-responsive">          
+                <table class="table" style="background-color:cadetblue;">
+                  <thead>
+                    <tr>
+                      <th>Branch</th>
+                      <th>Address</th>
+                      <th>Telephone</th>
+                    </tr>
+                  </thead>
+                  <tbody id="myTable">
+                    <tr>
+                      <td>AMBALANGODA</td>
+                      <td>NO 14/1, NEW GALLE ROAD, AMBALANGODA</td>
+                      <td>091 545 0453</td>
+                    </tr>
+                    <tr>
+                        <td>AMBALANTHOTA</td>
+                        <td>B N SAMARA GUNARATHNA, NO -23, BERAGAMA ROAD, AMBALANTOTA</td>
+                        <td>091 545 0453</td>
+                      </tr>
+                      <tr>
+                        <td>BADULLA</td>
+                        <td>NO 20, R.H.GUNAWARDENA MAWATHA, BADULLA</td>
+                        <td>055 567 0778</td>
+                      </tr>
+                      <tr>
+                        <td>CHILAW</td>
+                        <td>NO 66, KURUNEGALA ROAD,CHILAW</td>
+                        <td>032 567 0000</td>
+                      </tr>
+                      <tr>
+                        <td>DAMBULLA</td>
+                        <td>NO 447, KURUNEGALA JUNCTION, DAMBULLA</td>
+                        <td>066 567 9999</td>
+                      </tr>
+                      <tr>
+                        <td>GAMPAHA</td>
+                        <td>NO 170-A, COLOMBO ROAD, GAMPAHA</td>
+                        <td>091 545 0453</td>
+                      </tr>
+                      <tr>
+                        <td>HATTON</td>
+                        <td>NO 127, MAIN STREET, HATTON</td>
+                        <td>051 567 8678</td>
+                      </tr>
+                      <tr>
+                        <td>JAFFNA</td>
+                        <td>NO 170-A, COLOMBO ROAD, GAMPAHA</td>
+                        <td>021 567 0002</td>
+                      </tr>
+                      <tr>
+                        <td>KIRIBATHGODA</td>
+                        <td>NO 102, KANDY ROAD, KIRIBATHGODA</td>
+                        <td>011 576 0000</td>
+                      </tr>
+                      <tr>
+                        <td>MATALE</td>
+                        <td>NO 19, MAIN STREET, MATALE</td>
+                        <td>066 567 4833</td>
+                      </tr>
+                      <tr>
+                        <td>WTC</td>
+                        <td>1ST FLOOR, WORLD TRADE CENTRE</td>
+                        <td>011 567 0004</td>
+                      </tr>
+                  </tbody>
+                </table>
+                </div>
+              
+        </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+  
+</body>
+</html>
